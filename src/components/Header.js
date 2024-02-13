@@ -12,9 +12,9 @@ const Header = () => {
 
     return (
 
-        <div className="header">
+        <div className="flex space-x-4 bg-green-100">
             <div className="logo-space">
-                <img alt="logo" className="logo" src = { LOGO_URL } ></img>
+                <img alt="logo" className="w-[100px] border-solie " src = { LOGO_URL } ></img>
             </div>
             <div className="nav-items">
                 <ul>
