@@ -159,5 +159,3 @@ import {Component} from "path";
 -----------------------------------------
 
 # GIT
- hello dfjer
- oreee teja yala update cheyyalo git step-by-step cheppu 
