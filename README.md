@@ -56,110 +56,17 @@ import {Component} from "path";
  - useEffect()
 
 
- -----------------------------------------
-
- .header {
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid ;
-    padding: 5px;
-}
-
-.logo {
-    width: 100px;
-}
-
-.nav-items {
-    font-size: 25px;
-    padding: 0px 0px;
-    
-}
-
-.nav-items > ul {
-    display: flex;
-    list-style-type: none;
-    
-}
-
-.nav-items > ul > li {
-    padding: 0px 30px;
-    margin: 10px;
-    
-}
-
-.header-text {
-    text-decoration: none;
-    color: black;
-}
-
-.search {
-    margin: 25px;
-}
-
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0px 0px;
-}
-
-.res-card {
-    width: 249px;
-    padding: 5px;
-    margin: 5px;
-}
-
-.card-logo {
-    width: 100%;
-    height: 200px;
-}
-
-.res-card:hover {
-    border: 1px solid rgb(69, 67, 67);
-    cursor: pointer;
-}
-
-.shimmer-container {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.shimmer-card {
-    width: 249px;
-    height: 400px;
-    background-color: #f0f0f0;
-    margin: 10px;
-}
-
-.login-btn {
-    width: 90px;
-    margin-right: 15px;
-    padding: 15px;
-    font-size: 18px;
-
-}
-
-.login-btn:hover {
-    cursor: pointer;
-}
-
-.search-filter {
-    display: flex;
-    margin: 20px;
-}
-
-.search-bar {
-    margin-right: 30px;
-}
-
-.card-font {
-    color: black;
-    text-decoration: none;
-}
-
------------------------------------------
-
 # GIT
 
 git add .
 git commit -m "message"
 git push
+
+
+# Redux Toolkit
+ - Install @reduxjs/toolkit and react-redux
+ - Build our store
+ - Connect our store to our app
+ - Slice (cartSlice)
+ - Dispatch (action)
+ - Selector

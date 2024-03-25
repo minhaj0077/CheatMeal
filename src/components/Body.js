@@ -14,7 +14,7 @@ const Body = () => {
   const [searchRestaurent, setSearchRestaurent] = useState("");
 
   
-
+console.log("list", listOfRestaurents);
   
 
   useEffect(() => {
