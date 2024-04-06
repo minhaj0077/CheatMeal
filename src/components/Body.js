@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import { CDN_URL } from "../utils/constants";
 
 
 const Body = () => {
@@ -23,7 +24,8 @@ console.log("list", listOfRestaurents);
 
   const fetchData = async () => {
     
-    const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.3733354&lng=78.413675&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+    const data = await fetch(CDN_URL );
+      // "https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.3733354&lng=78.413675&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
     
 
     const json = await data.json();
