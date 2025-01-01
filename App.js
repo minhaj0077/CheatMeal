@@ -20,18 +20,36 @@ const Header = () => {
     );
 };
 
-const Restrocard = () => {
+const Restrocard = (props) => {
+    const { resName, cuisine, rating, time} = props;
+
     return (
         <div className="res-card">
             <img className="res-image"
             src={resimg} alt="resimage"></img>
-            <h3>Meghana Foods</h3>
-            <h4>Biryani, chainies, japanies</h4>
-            <h4>4.3 stars</h4>
-            <h4>30 Min</h4>
+            <h3>{resName}</h3>
+            <h4>{cuisine}</h4>
+            <h4>{rating}</h4>
+            <h4>{time}</h4>
             
         </div>
     );
+};
+
+const Cardslist = {
+    
+{type: "restaurant",…g}
+{type: "restaurant",…}
+{type: "restaurant", info: {resId: 19026140, name: "McDonald's", image: {,…}, o2FeaturedImage: {,…},…},…}
+{type: "restaurant",…}
+{type: "restaurant", info: {resId: 90195, name: "KFC", image: {,…}, o2FeaturedImage: {,…},…},…}
+{type: "restaurant",…}
+{type: "restaurant",…}
+{type: "restaurant", info: {resId: 19721316, name: "Pizza Hut", image: {,…}, o2FeaturedImage: {,…},…},…}
+{type: "restaurant",…}
+{type: "restaurant",…} 
+{type: "restaurant",…}
+ {type: "restaurant",…}
 };
 
 const Body = () => {
@@ -47,7 +65,10 @@ const Body = () => {
             </div>
 
             <div className="cards-container">
-                <Restrocard/><Restrocard/><Restrocard/><Restrocard/><Restrocard/><Restrocard/><Restrocard/><Restrocard/><Restrocard/><Restrocard/><Restrocard/><Restrocard/><Restrocard/><Restrocard/><Restrocard/><Restrocard/><Restrocard/><Restrocard/><Restrocard/><Restrocard/><Restrocard/><Restrocard/><Restrocard/><Restrocard/><Restrocard/>
+                <Restrocard resName="KFC" cuisine="biryani, chainise, japanise"
+                reting="4.4" time="25min" />
+                <Restrocard resName="Mecdonals" cuisine="burgure, chicken 65, japanise"
+                reting="4.3" time="27min" />
             </div>
 
         </div>
