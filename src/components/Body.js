@@ -1,13 +1,24 @@
 import Restrocard from "./Restrocard";
 import resList from "../utils/resList";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 
 const Body = () => {
 
-    const [listOfRestaurants, setListOfRestaurants] = useState(resList)
+    const [restaurantRating, setRestaurantRating] = useState( resList );
 
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    const fetchData = async () => {
+        const data = await fetch("https://www.zomato.com/hyderabad/kukatpally-restaurants?place_name=Bhagya%20Nagar%20Colony,%20Kukatpally,%20Hyderabad&dishv2_id=30308&context=delivery&category=1");
+        const json = await data.json();
+        console.log(json);
+        setRestaurantRating(json?.sections?.SECTION_SEARCH_RESULT);  
+    };
+   
     return (
         <div className="body">
 
@@ -17,15 +28,18 @@ const Body = () => {
                     search & button
                 </div>
                 <div className="filter">
-                    <button className="rating-filter" onClick={() => { const filteredList = listOfRestaurants.filter((res) => res.info.rating.aggregate_rating > 4);
-                        setListOfRestaurants(filteredList);
-                    }} >Top Reted Restaurants</button>
+                    <button className="rating-filter"
+                    onClick={ () => {const filteredList = restaurantRating.filter((rating) => rating?.info?.rating?.aggregate_rating > 4);
+                        setRestaurantRating(filteredList);
+                    }}>Top Reted Restaurants
+
+                    </button>
 
                 </div>
             </div>
 
             <div className="cards-container">
-                {listOfRestaurants.map((restaurant) => ( <Restrocard key={restaurant.info.resId} resData= {restaurant} /> ))}
+                {restaurantRating.map((restaurant) => ( <Restrocard key={restaurant.info.resId} resData= {restaurant} /> ))}
             </div>
 
         </div>
