@@ -2143,7 +2143,6 @@ const resList =
             "isDisabled": false,
             "bottomContainers": []
         },
-
         {
             "type": "restaurant",
             "info": {

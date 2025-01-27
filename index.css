@@ -1,4 +1,4 @@
-/* .header {
+.header {
     padding: 5px;
     display: flex;
     justify-content: space-between;
@@ -70,7 +70,6 @@
   .product-card {
     border: 1px solid #ccc;
     padding: 15px;
-    border-radius: 8px;
     text-align: center;
   }
   
@@ -79,9 +78,9 @@
     height: auto;
     border-radius: 8px;
   }
-   */
+  
 
-   .product-list {
+   /* .product-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
@@ -98,5 +97,19 @@
     width: 100%;
     height: auto;
     border-radius: 8px;
+  } */
+
+  .shimmer-container {
+    padding: 10px 110px;
+    margin: 5px 110px;
+    display: flex;
+    flex-wrap: wrap;
   }
   
+  .shimmer-card {
+    width: 300px;
+    height: 400px;
+    margin: 15px;
+    padding: 10px;
+    background-color: azure;
+  }
