@@ -10,20 +10,29 @@ import Shimmer from "./Shimmer";
 const Body = () => {
 
     const [listOfRestaurant, setListOfRestaurant] = useState(resList );
+    const [filteredRestaurant, setFilteredRestaurant] = useState(resList);
+
+    const [searchText, setSearchText] = useState("");
 
 
     if (listOfRestaurant.length === 0) {
         return <Shimmer/>;
     };
 
-   
     return (
         <div className="body">
 
             <div className="search-section">
                 <div className="logo">CheatMeal</div>
                 <div className="search">
-                    search & button
+                    <input type="text" className="search-box" value={searchText} onChange={(e)=> {
+                        setSearchText(e.target.value);
+                    }} />
+                    <button onClick={() => {
+                        const filteredRestaurant = listOfRestaurant.filter((res) => res?.info?.name?.toLowerCase()?.includes(searchText.toLowerCase()));
+
+                        setFilteredRestaurant(filteredRestaurant);
+                    }}>search</button>
                 </div>
                 <div className="filter">
                     <button className="rating-filter"
@@ -37,20 +46,8 @@ const Body = () => {
             </div>
 
             <div className="cards-container">
-                {listOfRestaurant.map((restaurant) => ( <Restrocard key={restaurant.info.resId} resData= {restaurant} /> ))}
+                {filteredRestaurant.map((restaurant) => ( <Restrocard key={restaurant.info.resId} resData= {restaurant} /> ))}
             </div>
-
-        {/* </div>
-        <div className="product-list">
-        {products.map(product => (
-          <div key={product.id} className="product-card">
-            <img src={product.image} alt={product.title} />
-            <h3>{product.title}</h3>
-            <p>{product.description}</p>
-            <p>Price: ${product.price}</p>
-            <p>Category: {product.category}</p>
-          </div> */}
-      {/* ))} */}
     </div>
     );
 };
