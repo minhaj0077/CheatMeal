@@ -26,7 +26,7 @@
 .nav-items > ul > li {
     padding: 10px;
     margin: 10px;
-    font-size: 25;
+    font-size: 25px;
 }
 
 .search-section {
@@ -113,3 +113,23 @@
     padding: 10px;
     background-color: azure;
   }
+
+  .login-btn {
+    padding: 0px 5px;
+    cursor: pointer; 
+    width: 80px;
+    color: white;
+    margin: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: white;
+      }
+
+  .login-btn.login {
+      color: rgb(6, 162, 6);
+    }
+    
+  .login-btn.logout {
+      color: rgb(231, 37, 37);
+    }

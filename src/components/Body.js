@@ -10,67 +10,7 @@ import Shimmer from "./Shimmer";
 const Body = () => {
 
     const [listOfRestaurant, setListOfRestaurant] = useState(resList );
-    // const [products, setProducts] = useState([]);
-    // const [loading, setLoading] = useState(true);
 
-    // useEffect(() => {
-    //     fetchData();
-    // }, []);
-
-    // const fetchData = async () => {
-    //     const data = await fetch("https://www.zomato.com/webroutes/search/home");
-
-    //     const json = await data.json();
-    //     console.log(json?.sections?.SECTION_SEARCH_RESULT);
-    //     setRestaurantRating(json?.sections?.SECTION_SEARCH_RESULT[0]);  
-    // };
-
-    
-        // const [loading, setLoading] = useState(true);
-        // const [error, setError] = useState(null);
-      
-
-    // useEffect(() => {
-    //     // Define the fetch function
-    //     const fetchData = async () => {
-    //       try {
-    //         const response = await fetch("https://fakestoreapi.com/products");
-    //         if (!response.ok) {
-    //           throw new Error("Network response was not ok");
-    //         }
-    //         const result = await response.json();
-    //         console.log("result",result)
-    //         // setRestaurantRating(result); // Update the state with the fetched data
-    //       } catch (err) {
-    //         setError(err.message); // Handle errors
-    //       } finally {
-    //         setLoading(false); // Set loading to false
-    //       }
-    //     };
-    
-    //     fetchData();
-    //   }, []); // Empty dependency array ensures this runs only once after the component mounts
-    
-    //   // Handle loading and error states
-    //   if (loading) return <p>Loading...</p>;
-    //   if (error) return <p>Error: {error}</p>;
-    // useEffect(() => {
-    //     // Fetch data from the API
-    //     fetch('https://fakestoreapi.com/products')
-    //       .then(res => res.json())
-    //       .then(json => {
-    //         setProducts(json);
-    //         setLoading(false);
-    //       })
-    //       .catch(error => {
-    //         console.error('Error fetching data:', error);
-    //         setLoading(false);
-    //       });
-    //   }, []);
-    
-    //   if (loading) {
-    //     return <div>Loading...</div>;
-    //   }
 
     if (listOfRestaurant.length === 0) {
         return <Shimmer/>;
