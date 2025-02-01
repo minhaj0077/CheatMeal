@@ -24,16 +24,18 @@ const Body = () => {
 
             <div className="search-section">
                 <div className="logo">CheatMeal</div>
+
                 <div className="search">
                     <input type="text" className="search-box" value={searchText} onChange={(e)=> {
                         setSearchText(e.target.value);
                     }} />
-                    <button onClick={() => {
+                    <button className="search-btn" onClick={() => {
                         const filteredRestaurant = listOfRestaurant.filter((res) => res?.info?.name?.toLowerCase()?.includes(searchText.toLowerCase()));
 
                         setFilteredRestaurant(filteredRestaurant);
                     }}>search</button>
                 </div>
+                
                 <div className="filter">
                     <button className="rating-filter"
                     onClick={ () => {const filteredList = listOfRestaurant.filter((rating) => rating?.info?.rating?.aggregate_rating > 4);

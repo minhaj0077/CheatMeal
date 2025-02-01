@@ -43,6 +43,9 @@
     padding: 10px;
     background-color: azure;
 }
+button:hover {
+  cursor: pointer;
+}
 .res-card:hover {
     cursor: pointer;
     border:1px solid #df78ef;
@@ -77,6 +80,33 @@
     width: 100%;
     height: auto;
     border-radius: 8px;
+  }
+
+  .rating-filter {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: antiquewhite;
+
+  }
+
+  .rating-filter:hover {
+    background-color: blanchedalmond;
+  }
+
+  .search-box {
+    padding: 10px;
+    margin: 0px 10px;
+    width: 400px;
+  }
+
+  .search-btn {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    
+  }
+  .search-btn:hover {
+    background-color: blanchedalmond;
   }
   
 
