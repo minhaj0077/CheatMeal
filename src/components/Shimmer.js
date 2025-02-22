@@ -1,16 +1,14 @@
 export const ShimmerCard = () => {
     return (
-      <div className=" animate-pulse w-[250px] h-[380px] bg-neutral-700 mx-5  mb-4 rounded-xl">
-        <div className="w-[99%] mx-auto h-[170px] bg-gray-400 mb-3 rounded-xl p-3"></div>
-        <div className="h-3/6 ml-[10px] mx-auto">
-          <div className="w-[97%] pt-3 text-lg  h-4 bg-gray-400 mb-3"></div>
-  
-          <div className="flex  w-[97%]  h-5  gap-3 my-4 ">
-            <div className="w-[30%] bg-gray-400 rounded-sm"></div>
-            <div className="w-[30%] bg-gray-400"></div>
-            <div className="w-[30%] bg-gray-400"></div>
-          </div>
-          <div className="w-[97%] h-3 bg-gray-400 mb-1 "></div>
+      <div className=" animate-pulse w-[330px] h-[500px] bg-neutral-200 mt-32 mx-5 rounded-xl">
+        <div className="w-[90%] mx-auto h-[250px] bg-neutral-300 m-6  rounded-xl p-3"></div>
+        <div className="h-4/6 ml-5">
+          <div className="w-[80%] pt-3 text-lg  h-6 bg-gray-300 my-4"></div>
+            <div className="w-[70%] h-4 my-4  bg-gray-300 rounded-sm"></div>
+            <div className="w-[40%] h-4 my-4 bg-gray-300"></div>
+            <div className="w-[50%] h-4 my-4 bg-gray-300"></div>
+          
+          <div className="w-[40%] h-4 bg-gray-300 mb-1 my-4 "></div>
         </div>
       </div>
     );
@@ -18,7 +16,7 @@ export const ShimmerCard = () => {
   
   export const Shimmer = () => {
     return (
-      <div className="Shimmer-con flex flex-wrap mt-6 justify-center">
+      <div className="Shimmer-con flex flex-wrap justify-center">
         {Array(20)
           .fill("")
           .map((index) => {

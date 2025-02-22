@@ -23,6 +23,7 @@ const App = () => {
             <div className="app">
                 <Header />
                 <Outlet />
+                
             </div> 
         </Provider>
 
