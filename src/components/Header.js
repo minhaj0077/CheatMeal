@@ -1,8 +1,8 @@
-import { LOGO_URL } from "../utils/constants";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import { useSelector } from "react-redux";
+import LOGO_IMG from "../images/logo.svg"
 
 const Header = () => {
 
@@ -17,7 +17,8 @@ const Header = () => {
 
         <div className="flex justify-between items-center bg-green-100">
             <div className="logo-space">
-                <img alt="logo" className="w-[110px] m-2" src={LOGO_URL} ></img>
+                <Link><img alt="logo" className="w-[110px] m-2 rounded-full " src={LOGO_IMG}/></Link>
+                {/* <img alt="logo" className="w-[110px] m-2 rounded-full " src={LOGO_IMG} ></img> */}
             </div>
             <div className="nav-items">
                 <ul className="flex space-x-14 font-medium text-xl items-center mx-16">

@@ -1,8 +1,8 @@
+import CONTACT_US from "../images/contact.png"
 const Contact = () => {
     return(
-        <div>
-            <h1>Contact Us</h1>
-            <h3>Your getting app contacts in this page</h3>
+        <div className="width-full">
+            <img alt="aboutus" className="py-10"  src={CONTACT_US}/>
         </div>
     )
 };

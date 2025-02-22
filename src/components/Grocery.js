@@ -1,7 +1,8 @@
+import GROCERY from "../images/grocery.jpg"
 const Grocery = () => {
     return (
-        <div>
-            <h1>This page have lots of components</h1>
+        <div className="py-5 w-screen-xxl h-max ">
+            <img alt="aboutus" className="py-5 w-screen-xxl h-max "  src={GROCERY}/>
         </div>
     )
 }

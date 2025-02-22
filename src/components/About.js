@@ -1,8 +1,9 @@
+import ABOUT_US from "../images/aboutus.png";
+
 const About = () => {
     return (
         <div>
-        <h1>About Us</h1>
-        <h3>Showing about us page </h3>
+            <img alt="aboutus"  src={ABOUT_US}/>
     </div>
     )
    
