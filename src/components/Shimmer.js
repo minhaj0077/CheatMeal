@@ -1,6 +1,6 @@
 export const ShimmerCard = () => {
     return (
-      <div className=" animate-pulse w-[250px] h-[380px] bg-amber-200 mx-5  mb-4 rounded-xl">
+      <div className=" animate-pulse w-[250px] h-[380px] bg-neutral-700 mx-5  mb-4 rounded-xl">
         <div className="w-[99%] mx-auto h-[170px] bg-gray-400 mb-3 rounded-xl p-3"></div>
         <div className="h-3/6 ml-[10px] mx-auto">
           <div className="w-[97%] pt-3 text-lg  h-4 bg-gray-400 mb-3"></div>
